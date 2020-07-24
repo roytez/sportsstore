@@ -1,0 +1,7 @@
+{
+  "name": "sportsstore",
+  "version": "1.0.0",
+  "dependencies": {
+    "connect": "3.7.0"
+  }
+}
