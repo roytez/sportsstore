@@ -31,6 +31,7 @@ angular.module("customFilters", [])
             }
         }
     })
+
     .filter("pageCount", function () {
         return function (data, size) {
             if (angular.isArray(data)) {
