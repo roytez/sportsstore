@@ -3,6 +3,7 @@
     .ng-valid { background-color: lightgreen; }
     span.error { color: red; font-weight: bold; }
 
+
 </style>
 
 <h2>Dokończ zamówienie</h2>
@@ -28,6 +29,53 @@
                 Proszę podać nazwę ulicy.
             </span>
         </div>
+
+        <div class="form-group">
+            <label for="">Miasto</label>
+            <input name="city" class="form-control"
+                   ng-model="data.shipping.city" required/>
+            <span class="error" ng-show="shippingForm.city.$error.required">
+                Proszę podać nazwę miejscowości.
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Województwo</label>
+            <input name="state" class="form-control"
+                   ng-model="data.shipping.state" required/>
+            <span class="error" ng-show="shippingForm.state.$error.required">
+                Proszę podać nazwę województwa.
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Kod pocztowy</label>
+            <input name="zip" class="form-control"
+                   ng-model="data.shipping.name" required/>
+            <span class="error" ng-show="shippingForm.zip.$error.required">
+                Proszę podać kod pocztowy.
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Kraj</label>
+            <input name="country" class="form-control"
+                   ng-model="data.shipping.country" required/>
+            <span class="error" ng-show="shippingForm.country.$error.required">
+                Proszę podać nazwę kraju.
+            </span>
+        </div>
+
+        <h3>Opcje</h3>
+        <div class="checkbox">
+            <label for="">
+                <input type="checkbox" name="giftwrap"
+                ng-model="data.shipping.giftwrap" />
+                    Zapakuj jako prezent
+            </label>
+        </div>
+
+
         <div class="text-center">
             <button ng-disabled="shippingForm.$invalid"
                     class="btn btn-primary">Dokończ zamówienie
