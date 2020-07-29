@@ -2,6 +2,7 @@
     .ng-invalid { background-color: lightpink; }
     .ng-valid { background-color: lightgreen; }
     span.error { color: red; font-weight: bold; }
+
 </style>
 
 <h2>Dokończ zamówienie</h2>
@@ -28,7 +29,9 @@
             </span>
         </div>
         <div class="text-center">
-            <button class="btn btn-primary">Dokończ zamówienie</button>
+            <button ng-disabled="shippingForm.$invalid"
+                    class="btn btn-primary">Dokończ zamówienie
+            </button>
         </div>
     </div>
 </form>
