@@ -1,5 +1,5 @@
 angular.module("sportsStore")
-.controller("cartSummaryController", function($scope, cart) {
+.controller("cartSummaryController", function ($scope, cart) {
     $scope.cartData = cart.getProducts();
 
     $scope.total = function () {
