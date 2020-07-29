@@ -20,8 +20,12 @@
                 <strong>{{item.name}}</strong>
                 <span class="pull-right label label-primary">
                             {{item.price | currency}}
-                        </span>
+                </span>
             </h3>
+            <button ng-click="addProductToCart(item)"
+            class="btn btn-success pull-right">
+                Dodaj do koszyka
+            </button>
             <span class="lead">{{item.description}}</span>
         </div>
         <div class="pull-right btn-group">
