@@ -1,4 +1,35 @@
-<div class="lead">
-    To jest widok podsumowania po przejściu do kasy.
+<h2>Twój koszyk na zakupy</h2>
+
+<div ng-controller="cartSummaryController">
+
+    <div class="alert alert-warning" ng-show="cartData.length == 0">
+        Koszyk na zakupy jest pusty.
+        <a href="#/products" class="alert-link">Kliknij tutaj, aby powrócić do katalogu</a>
+    </div>
+    <div ng-hide="cartData.length == 0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ilość</th>
+                    <th>Produkt</th>
+                    <th class="text-right">Cena</th>
+                    <th class="text-right">Wartość</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Wartość całkowita:</td>
+                    <td class="text-right">
+                        {{total() | currency}}
+                    </td>
+                </tr>
+            </tfoot>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <a href="#/products" class="btn btn-primary">Kontynuuj zakupy</a>
+            <a href="#/placeorder" class="btn btn-primary">Złóż zamówienie</a>
+        </div>6
+    </div>
 </div>
-<a href="#/products" class="btn btn-primary">Powrót</a>
