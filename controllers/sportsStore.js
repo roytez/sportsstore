@@ -3,6 +3,7 @@ angular.module("sportsStore")
     .constant("orderUrl", "http://localhost:5500/orders")
     .controller("sportsStoreCtrl", function ($scope, $http, $location,
         dataUrl, orderUrl, cart) {
+
         $scope.data = {
         };
 
@@ -25,7 +26,7 @@ angular.module("sportsStore")
                 .error(function (error) {
                     $scope.data.orderError = error;
                 }).finally(function () {
-                    $location.path("/complete")
+                    $location.path("/complete");
                 });
         }
     });

@@ -4,6 +4,7 @@
     span.error { color: red; font-weight: bold; }
 
 
+
 </style>
 
 <h2>Dokończ zamówienie</h2>
@@ -70,15 +71,15 @@
         <div class="checkbox">
             <label for="">
                 <input type="checkbox" name="giftwrap"
-                ng-model="data.shipping.giftwrap" />
-                    Zapakuj jako prezent
+                       ng-model="data.shipping.giftwrap"/>
+                Zapakuj jako prezent
             </label>
         </div>
 
 
         <div class="text-center">
             <button ng-disabled="shippingForm.$invalid"
-                ng-click="sendOrder(data.shipping"
+                    ng-click="sendOrder(data.shipping)"
                     class="btn btn-primary">
                 Dokończ zamówienie
             </button>
