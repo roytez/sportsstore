@@ -1,17 +1,34 @@
+<style>
+    .ng-invalid { background-color: lightpink; }
+    .ng-valid { background-color: lightgreen; }
+    span.error { color: red; font-weight: bold; }
+</style>
+
 <h2>Dokończ zamówienie</h2>
 <p>Podaj wymagane dane, a zamówienie zostanie natychmiast wysłane!</p>
-<div class="well">
-    <h3>Odbiorca</h3>
-    <div class="form-group">
-        <label for="">Imię i nazwisko</label>
-        <input type="text" class="form-control" ng-model="data.shipping.name" />
+
+<form name="shippingForm" novalidate>
+    <div class="well">
+        <h3>Odbiorca</h3>
+        <div class="form-group">
+            <label for="">Imię i nazwisko</label>
+            <input name="name" class="form-control"
+                   ng-model="data.shipping.name" required/>
+            <span class="error" ng-show="shippingForm.name.$error.required">
+                Proszę podać imię i nazwisko.
+            </span>
+        </div>
+        <h3>Adres</h3>
+        <div class="form-group">
+            <label for="">Nazwa ulicy</label>
+            <input name="street" class="form-control"
+                   ng-model="data.shipping.street" required/>
+            <span class="error" ng-show="shippingForm.street.$error.required">
+                Proszę podać nazwę ulicy.
+            </span>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary">Dokończ zamówienie</button>
+        </div>
     </div>
-    <h3>Adres</h3>
-    <div class="form-group">
-        <label for="">Nazwa ulicy</label>
-        <input type="text" class="form-control" ng-model="data.shipping.street" />
-    </div>
-    <div class="text-center">
-        <button class="btn btn-primary">Dokończ zamówienie</button>
-    </div>
-</div>
+</form>
