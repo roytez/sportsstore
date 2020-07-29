@@ -21,6 +21,9 @@
             });
         });
 
+
+
+
     </script>
     <script src="controllers/sportsStore.js"></script>
     <script src="filters/customFilters.js"></script>
@@ -31,15 +34,13 @@
 <body ng-controller="sportsStoreCtrl">
 <div class="navbar navbar-inverse">
     <a class="navbar-brand" href="#">SKLEP SPORTOWY</a>
-    <cart-summary />
+    <cart-summary/>
 </div>
 
 <div class="alert alert-danger" ng-show="data.error">
     Błąd ({{data.error.status}}). Dane produktu nie zostały wczytane.
     <a href="/app.html" class="alert-link">Kliknij tutaj, aby spróbować ponownie</a>
 </div>
-
-    <ng-view />
-
+<ng-view/>
 </body>
 </html>
