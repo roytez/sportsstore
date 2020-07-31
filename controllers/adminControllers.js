@@ -1,4 +1,4 @@
-angular.module("sportStoreAdmin")
+angular.module("sportsStoreAdmin")
 .constant("authUrl", "http://localhost:5500/users/login")
 .controller("authCtrl", function ($scope, $http, $location, authUrl) {
     $scope.authenticate = function (user, pass) {
