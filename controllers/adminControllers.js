@@ -1,7 +1,7 @@
 angular.module("sportsStoreAdmin")
     .constant("authUrl", "http://localhost:5500/users/login")
     .constant("ordersUrl", "http://localhost:5500/orders")
-    .controller("authCtrl", function($scope, $http, $location, authUrl) {
+    .controller("authCtrl", function ($scope, $http, $location, authUrl) {
         $scope.authenticate = function (user, pass) {
             $http.post(authUrl, {
                 username: user,
@@ -15,7 +15,7 @@ angular.module("sportsStoreAdmin")
             });
         }
     })
-    .controller("mainCtrl", function($scope) {
+    .controller("mainCtrl", function ($scope) {
         $scope.screens = ["Produkty", "Zamówienia"];
         $scope.current = $scope.screens[0];
 
@@ -29,7 +29,7 @@ angular.module("sportsStoreAdmin")
         };
     })
     .controller("ordersCtrl", function ($scope, $http, ordersUrl) {
-        $http.get(ordersUrl, { withCredentials : true })
+        $http.get(ordersUrl, { withCredentials: true })
             .success(function (data) {
                 $scope.orders = data;
             })
@@ -39,7 +39,7 @@ angular.module("sportsStoreAdmin")
 
         $scope.selectedOrder;
 
-        $scope.selectedOrder = function(order) {
+        $scope.selectOrder = function(order) {
             $scope.selectedOrder = order;
         };
 
