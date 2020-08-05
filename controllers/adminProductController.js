@@ -10,7 +10,7 @@ angular.module("sportsStoreAdmin")
         }
 
         $scope.deleteProduct = function (product) {
-            product.$detale().then(function () {
+            product.$delete().then(function () {
                 $scope.products.splice($scope.products.indexOf(product), 1);
             });
         }

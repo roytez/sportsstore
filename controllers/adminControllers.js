@@ -25,7 +25,7 @@ angular.module("sportsStoreAdmin")
 
             $scope.getScreen = function () {
             return $scope.current == "Produkty"
-                ? "/views/adminProducts.html" : "/views/adminOrders.html";
+                ? "/views/adminProduct.html" : "/views/adminOrders.html";
         };
     })
     .controller("ordersCtrl", function ($scope, $http, ordersUrl) {
