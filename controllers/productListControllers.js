@@ -31,6 +31,6 @@ angular.module("sportsStore")
             return $scope.selectedPage == page ? productListActiveClass : "";
         }
         $scope.addProductToCart = function (product) {
-            cart.addProduct(product.id, product.name, product.price)
+            cart.addProduct(product.id, product.name, product.price);
         }
     });

@@ -5,21 +5,19 @@
            class="btn btn-block btn-default btn-lg">
             Strona główna
         </a>
-        <a ng-repeat="item in data.products | orderBy:'category' |
-                unique:'category'" ng-click="selectCategory(item)"
-           class="btn btn-block btn-default btn-lg"
+        <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
+           ng-click="selectCategory(item)" class="btn btn-block btn-default btn-lg"
            ng-class="getCategoryClass(item)">
             {{item}}
         </a>
     </div>
     <div class="col-xs-8">
         <div class="well"
-             ng-repeat="item in data.products | filter:categoryFilterFn |
-                    range:selectedPage:pageSize">
+             ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
             <h3>
                 <strong>{{item.name}}</strong>
                 <span class="pull-right label label-primary">
-                            {{item.price | currency}}
+                    {{item.price | currency}}
                 </span>
             </h3>
             <button ng-click="addProductToCart(item)"
